@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\StaffController;
 use Illuminate\Support\Facades\Route;
 
@@ -28,3 +29,5 @@ route::get('/menu_update/{id}', [StaffController::class, 'menu_update']);
 route::post('/edit_menu/{id}', [StaffController::class, 'edit_menu']);
 
 route::get('/menu_delete/{id}', [StaffController::class, 'menu_delete']);
+
+route::get('/pesanan_detail/{id}', [HomeController::class, 'pesanan_detail'])->name('pesanan_detail');
